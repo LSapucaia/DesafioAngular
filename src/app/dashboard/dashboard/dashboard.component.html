@@ -1,0 +1,85 @@
+<h2 class="text-center">Dashboard</h2>
+<div class="form-field text-center">
+  <label class="form-field_label form-control-lg" for="veiculo">Veículo:</label>
+    <select id="select" name="select">
+      <option value='Hide' style="display:none">Selecione</option>
+      <option value="Ranger">Ranger</option>
+      <option value="Mustang">Mustang</option>
+      <option value="Territory">Territory</option>
+      <option value="BoncoSport">Bronco Sport</option>
+    </select>
+</div>
+
+<div id="main" class="main">
+  <div id="Ranger">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-2" >
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="assets/img/ranger.png"
+            alt="Ford Ranger"
+          />
+        </div>
+        <div class="col-md-6">
+          <app-vehicle [x]='0'></app-vehicle>
+          <app-vehicle-data></app-vehicle-data>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="BoncoSport">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="assets/img/broncoSport.png"
+            alt="Ford Bronco Sport"
+          />
+        </div>
+        <div class="col-md-6">
+          <app-vehicle [x]='3'></app-vehicle>
+          <app-vehicle-data></app-vehicle-data>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Mustang">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="assets/img/mustang.png"
+            alt="Ford Mustang"
+          />
+        </div>
+        <div class="col-md-6">
+          <app-vehicle [x]='1'></app-vehicle>
+          <app-vehicle-data></app-vehicle-data>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Territory">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <img
+            class="img-fluid d-none d-sm-block"
+            src="assets/img/territory.png"
+            alt="Ford Territory"
+          />
+        </div>
+        <div class="col-md-6">
+          <app-vehicle [x]='2'></app-vehicle>
+          <app-vehicle-data></app-vehicle-data>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

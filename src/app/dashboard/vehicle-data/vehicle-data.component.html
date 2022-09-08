@@ -1,0 +1,28 @@
+<po-page-default>
+  <po-input p-label="Código-VIN" [formControl]="vehicleDataInput"></po-input>
+  <div *ngIf="vehiclesData$ | async as vehiclesData; else elseBlock">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"><b>VIN</b></th>
+            <th scope="col"><b>Odômetro</b></th>
+            <th scope="col"><b>Combustível</b></th>
+            <th scope="col"><b>Status</b></th>
+            <th scope="col"><b>Lat.</b></th>
+            <th scope="col"><b>Long.</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehicleData of vehiclesData">
+          <td>{{vehicleData.vin}}</td>
+          <td>{{vehicleData.odometer}}</td>
+          <td>{{vehicleData.fuelLevel}}</td>
+          <td>{{vehicleData.status}}</td>
+          <td>{{vehicleData.lat}}</td>
+          <td>{{vehicleData.long}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <ng-template #elseBlock>Busque pelo código VIN do veículo</ng-template>
+</po-page-default>
